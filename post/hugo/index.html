@@ -35,7 +35,7 @@ git clone https://github.com/olOwOlo/hugo-theme-even themes/even 也可以添加
   </head>
   <body>
     <header class="app-header">
-      <a href="https://LLDLZ.github.io/"><img class="app-header-avatar" src="/images/avatar.png" alt="ZhangLe" /></a>
+      <a href="https://LLDLZ.github.io/"><img class="app-header-avatar" src="https://github.com/LLDLZ/LLDLZ.github.io/blob/master/images/avatar.png" alt="ZhangLe" /></a>
       <h1>张乐的博客</h1>
       <p>share and love</p>
       <div class="app-header-social">
@@ -148,12 +148,16 @@ git clone https://github.com/olOwOlo/hugo-theme-even themes/even 也可以添加
 <h3 id="安装hugo">安装Hugo</h3>
 <p><a href="https://github.com/gohugoio/hugo/releases">hugo下载地址</a></p>
 <h4 id="下载完成后需要配置到系统环境变量中">下载完成后需要配置到系统环境变量中</h4>
-<h4 id="基本步骤">基本步骤</h4>
-<ul>
-<li>
-<p>布署hugo博客类似webpack打包</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">theme</span> 
-</code></pre></div><p>新建文章</p>
+<h4 id="使用hugo生成博客">使用Hugo生成博客</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript">
+
+<span style="color:#960050;background-color:#1e0010">####</span> <span style="color:#a6e22e">基本步骤</span>
+
+<span style="color:#f92672">-</span> <span style="color:#a6e22e">布署hugo博客类似webpack打包</span>
+
+  <span style="color:#e6db74">```javascript
+</span><span style="color:#e6db74">  hugo --theme 
+</span></code></pre></div><p>新建文章</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">post</span><span style="color:#f92672">/</span><span style="color:#a6e22e">blog</span>.<span style="color:#a6e22e">md</span>
 </code></pre></div><p>部署远程</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">theme</span><span style="color:#f92672">=</span><span style="color:#a6e22e">m10c</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">baseUrl</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://LLDLZ.github.io/&#34;</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span>
@@ -161,9 +165,7 @@ git clone https://github.com/olOwOlo/hugo-theme-even themes/even 也可以添加
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">remote</span> <span style="color:#a6e22e">add</span> <span style="color:#a6e22e">orgin</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/LLDLZ/LLDLZ.github.io.git 
 </span></code></pre></div><p>运行hugo</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">t</span> <span style="color:#a6e22e">m10c</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span>
-</code></pre></div></li>
-</ul>
-
+</code></pre></div>
     </div>
     <div class="post-footer">
       
