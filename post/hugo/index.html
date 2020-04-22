@@ -35,7 +35,7 @@ git clone https://github.com/olOwOlo/hugo-theme-even themes/even 也可以添加
   </head>
   <body>
     <header class="app-header">
-      <a href="https://LLDLZ.github.io/"><img class="app-header-avatar" src="https://github.com/LLDLZ/LLDLZ.github.io/blob/master/images/avatar.png" alt="ZhangLe" /></a>
+      <a href="https://LLDLZ.github.io/"><img class="app-header-avatar" src="https://dingyue.ws.126.net/2019/06/23/4def3f4d6bd24da29cef13e29089e0c5.jpeg" alt="ZhangLe" /></a>
       <h1>张乐的博客</h1>
       <p>share and love</p>
       <div class="app-header-social">
@@ -115,57 +115,92 @@ git clone https://github.com/olOwOlo/hugo-theme-even themes/even 也可以添加
 <span style="color:#a6e22e">author</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>  
 <span style="color:#f92672">---</span>  
 <span style="color:#a6e22e">这里是文章内容</span>  
-</code></pre></div><h4 id="配置项目">配置项目</h4>
-<h5 id="覆盖configtoml">覆盖config.toml</h5>
-<p>拷贝<code>themes/even/exampleSite</code>下的<code>config.toml</code>覆盖根目录下的<code>config.toml</code></p>
-<h6 id="configtoml一些设置项目">config.toml一些设置项目</h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript"><span style="color:#a6e22e">logoTitle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;你的首页标题名&#34;</span>  
-
-<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">归档</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">标签</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">分类每页显示的文章数目</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">建议修改为一个较大的值</span>  
-<span style="color:#a6e22e">archivePaginate</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>  
-
-<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">是否在归档页显示文章的总数</span>  
-<span style="color:#a6e22e">showArchiveCount</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>  
-
-<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">是否使用mathjax</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">数学公式</span><span style="color:#960050;background-color:#1e0010">）</span>  
-<span style="color:#a6e22e">mathjax</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>           <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">see</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//www.mathjax.org/   
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">mathjaxEnableSingleDollar</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>   <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">是否使用</span> <span style="color:#a6e22e">$</span>...<span style="color:#a6e22e">$</span> <span style="color:#a6e22e">即可進行inline</span> <span style="color:#a6e22e">latex渲染</span>  
-<span style="color:#a6e22e">mathjaxEnableAutoNumber</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>   <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">是否使用公式自动编号</span>  
-
-<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">链接到markdown原始文件</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">仅当允许hugo生成markdown文件时有效</span><span style="color:#960050;background-color:#1e0010">）</span>  
-<span style="color:#a6e22e">linkToMarkDown</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>    <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Only</span> <span style="color:#a6e22e">effective</span> <span style="color:#a6e22e">when</span> <span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">will</span> <span style="color:#a6e22e">output</span> .<span style="color:#a6e22e">md</span> <span style="color:#a6e22e">files</span>.  
-
-<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">启用公共CDN</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">需自行定义</span>  
-[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">publicCDN</span>]        <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">load</span> <span style="color:#a6e22e">these</span> <span style="color:#a6e22e">files</span> <span style="color:#a6e22e">from</span> <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">cdn</span>          
-
-<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">社交链接</span>                
-[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">social</span>]                                         
 </code></pre></div><h4 id="预览">预览</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">D</span>  
 <span style="color:#960050;background-color:#1e0010">#</span>...  
 <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">Web</span> <span style="color:#a6e22e">Server</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">available</span> <span style="color:#a6e22e">at</span> <span style="color:#a6e22e">http</span><span style="color:#f92672">:</span><span style="color:#75715e">//localhost:1313/ (bind address 127.0.0.1)  
 </span></code></pre></div><h3 id="win-10版本">WIN 10版本</h3>
-<h3 id="安装hugo">安装Hugo</h3>
+<h4 id="安装hugo">安装Hugo</h4>
 <p><a href="https://github.com/gohugoio/hugo/releases">hugo下载地址</a></p>
 <h4 id="下载完成后需要配置到系统环境变量中">下载完成后需要配置到系统环境变量中</h4>
 <h4 id="使用hugo生成博客">使用Hugo生成博客</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript">
-
-<span style="color:#960050;background-color:#1e0010">####</span> <span style="color:#a6e22e">基本步骤</span>
-
-<span style="color:#f92672">-</span> <span style="color:#a6e22e">布署hugo博客类似webpack打包</span>
-
-  <span style="color:#e6db74">```javascript
-</span><span style="color:#e6db74">  hugo --theme 
-</span></code></pre></div><p>新建文章</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">post</span><span style="color:#f92672">/</span><span style="color:#a6e22e">blog</span>.<span style="color:#a6e22e">md</span>
-</code></pre></div><p>部署远程</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">theme</span><span style="color:#f92672">=</span><span style="color:#a6e22e">m10c</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">baseUrl</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://LLDLZ.github.io/&#34;</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span>
-</code></pre></div><p>git和远端仓库链接</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">remote</span> <span style="color:#a6e22e">add</span> <span style="color:#a6e22e">orgin</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/LLDLZ/LLDLZ.github.io.git 
-</span></code></pre></div><p>运行hugo</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">site</span> <span style="color:#a6e22e">myblog</span>
+</code></pre></div><p>这样我的User/win 10/里面就生成了一个mybolg 文件夹，那么这个文件夹就代表着我们的博客网站</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">archetypes</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">toml</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">content</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">data</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">layouts</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#66d9ef">static</span>
+<span style="color:#960050;background-color:#1e0010">└──</span> <span style="color:#a6e22e">themes</span>
+</code></pre></div><h4 id="下载设置主题">下载设置主题</h4>
+<p><a href="https://themes.gohugo.io/hugo-theme-m10c/">点击下载主题</a> 我的是m10c</p>
+<p>在myblog/themes文件夹下输入</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">clone</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/vaga/hugo-theme-m10c.git themes/m10c
+</span></code></pre></div><p>即可完成下载</p>
+<h4 id="启动博客">启动博客</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">t</span> <span style="color:#a6e22e">m10c</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span>
-</code></pre></div>
+</code></pre></div><p>这时可通过 http://localhost:1313/ 访问</p>
+<h4 id="创建一篇文章">创建一篇文章</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">post</span><span style="color:#f92672">/</span><span style="color:#a6e22e">hugo</span>.<span style="color:#a6e22e">md</span>
+
+<span style="color:#75715e">//文件目录
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">archetypes</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">toml</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">content</span>
+  <span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">post</span>
+    <span style="color:#960050;background-color:#1e0010">├──</span><span style="color:#a6e22e">hugo</span>.<span style="color:#a6e22e">md</span> 
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">data</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">layouts</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#66d9ef">static</span>
+<span style="color:#960050;background-color:#1e0010">└──</span> <span style="color:#a6e22e">themes</span>
+</code></pre></div><p>完成后在根目录启动项目</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">t</span> <span style="color:#a6e22e">m10c</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span>
+</code></pre></div><h4 id="将个人博客到远端服务器">将个人博客到远端服务器</h4>
+<ol>
+<li>
+<p>在github官网页面新建一个仓库</p>
+</li>
+<li>
+<p>仓库名字必须是自己的github名字加.github.io例如</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//Owner
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">LLDLZ</span>
+<span style="color:#75715e">//Repository name
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">LLDLZ</span>.<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">io</span>
+</code></pre></div></li>
+<li>
+<p>利用如下代码部署</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//若添加了文章  则需要重新部署
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">hugo</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">theme</span><span style="color:#f92672">=</span><span style="color:#a6e22e">m10c</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">baseUrl</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://LLDLZ.github.io/&#34;</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span>
+<span style="color:#75715e">//生成后文件目录
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">archetypes</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">toml</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">content</span>
+<span style="color:#960050;background-color:#1e0010">├──</span><span style="color:#66d9ef">public</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">data</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">layouts</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#66d9ef">static</span>
+<span style="color:#960050;background-color:#1e0010">└──</span> <span style="color:#a6e22e">themes</span>
+</code></pre></div></li>
+<li>
+<p>进入public目录下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//初始化git仓库
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">init</span> 
+<span style="color:#75715e">//添加修改文件
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">add</span> .
+<span style="color:#75715e">//提交到暂存库
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">commit</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">m</span><span style="color:#e6db74">&#34;第一个提交&#34;</span>
+<span style="color:#75715e">//将public和远端仓库建立联系
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">git</span> <span style="color:#a6e22e">remote</span> <span style="color:#a6e22e">add</span> <span style="color:#a6e22e">orgin</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/LLDLZ/LLDLZ.github.io.git
+</span><span style="color:#75715e">//推送代码
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">push</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">origin</span> <span style="color:#a6e22e">master</span>
+</code></pre></div></li>
+</ol>
+<h4 id="完成">完成</h4>
+<ul>
+<li>此时可上线查看自己的博客项目</li>
+</ul>
+
     </div>
     <div class="post-footer">
       
