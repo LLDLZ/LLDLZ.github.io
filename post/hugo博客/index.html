@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>hugo创建自己的博客（保姆级教程 // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://LLDLZ.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="hugo创建自己的博客（保姆级教程"/>
+<meta name="twitter:description" content="使用hugo创建自己的博客网站 MAC版本 安装 brew install hugo # 检查安装成功 hugo version Hugo Static Site Generator v0.58.3/extended darwin/amd64 BuildDate: unknown 生成 site 目录 hugo new site blog cd blog git init # 目录结构 tree blog config.toml 是配置文件，在里面可以定义博客地址、构建配置、标题、导航栏等等。 themes 是主题目录，可以去 themes.gohugo.io 下载喜欢的主题。 content 是博客文章的目录。
+安装主题 去 themes.gohugo.io 选择喜欢的主题，下载到 themes 目录中，然后在 config.toml 中配置 theme = &quot;even&quot; 即可。
+even主题介绍 hugo-theme-even:hexo-theme-even的移植版本.
+下载 可以直接 clone 到 themes 目录下，优点是如果对主题有调整需求可以同时提交到 git 控制中。
+git clone https://github.com/olOwOlo/hugo-theme-even themes/even 也可以添加到 git 的 submodule 中，优点是后面讲到用 travis 自动部署时比较方便。如果需要对主题做更改，最好 fork 主题再做改动。"/>
+
+    <meta property="og:title" content="hugo创建自己的博客（保姆级教程" />
+<meta property="og:description" content="使用hugo创建自己的博客网站 MAC版本 安装 brew install hugo # 检查安装成功 hugo version Hugo Static Site Generator v0.58.3/extended darwin/amd64 BuildDate: unknown 生成 site 目录 hugo new site blog cd blog git init # 目录结构 tree blog config.toml 是配置文件，在里面可以定义博客地址、构建配置、标题、导航栏等等。 themes 是主题目录，可以去 themes.gohugo.io 下载喜欢的主题。 content 是博客文章的目录。
+安装主题 去 themes.gohugo.io 选择喜欢的主题，下载到 themes 目录中，然后在 config.toml 中配置 theme = &quot;even&quot; 即可。
+even主题介绍 hugo-theme-even:hexo-theme-even的移植版本.
+下载 可以直接 clone 到 themes 目录下，优点是如果对主题有调整需求可以同时提交到 git 控制中。
+git clone https://github.com/olOwOlo/hugo-theme-even themes/even 也可以添加到 git 的 submodule 中，优点是后面讲到用 travis 自动部署时比较方便。如果需要对主题做更改，最好 fork 主题再做改动。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://LLDLZ.github.io/post/hugo%E5%8D%9A%E5%AE%A2/" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://LLDLZ.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">hugo创建自己的博客（保姆级教程</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 1, 0001
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="使用hugo创建自己的博客网站">使用hugo创建自己的博客网站</h2>
+<h3 id="mac版本">MAC版本</h3>
+<h4 id="安装">安装</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript"><span style="color:#a6e22e">brew</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">hugo</span>  
+
+<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">检查安装成功</span>  
+<span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">version</span>  
+
+<span style="color:#a6e22e">Hugo</span> <span style="color:#a6e22e">Static</span> <span style="color:#a6e22e">Site</span> <span style="color:#a6e22e">Generator</span> <span style="color:#a6e22e">v0</span><span style="color:#ae81ff">.58.3</span><span style="color:#f92672">/</span><span style="color:#a6e22e">extended</span> <span style="color:#a6e22e">darwin</span><span style="color:#f92672">/</span><span style="color:#a6e22e">amd64</span> <span style="color:#a6e22e">BuildDate</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">unknown</span>  
+</code></pre></div><h4 id="生成-site-目录">生成 site 目录</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript"><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">site</span> <span style="color:#a6e22e">blog</span>  
+<span style="color:#a6e22e">cd</span> <span style="color:#a6e22e">blog</span>  
+<span style="color:#a6e22e">git</span> <span style="color:#a6e22e">init</span>  
+
+<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">目录结构</span>  
+<span style="color:#a6e22e">tree</span> <span style="color:#a6e22e">blog</span>  
+</code></pre></div><p><code>config.toml</code> 是配置文件，在里面可以定义博客地址、构建配置、标题、导航栏等等。 <code>themes</code> 是主题目录，可以去 <code>themes.gohugo.io</code> 下载喜欢的主题。 <code>content</code> 是博客文章的目录。</p>
+<h4 id="安装主题">安装主题</h4>
+<p>去 <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fthemes.gohugo.io">themes.gohugo.io </a>选择喜欢的主题，下载到 themes 目录中，然后在 <code>config.toml</code> 中配置 <code>theme = &quot;even&quot;</code> 即可。</p>
+<p><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fthemes.gohugo.io%2Fhugo-theme-even%2F">even主题介绍</a>
+<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2FolOwOlo%2Fhugo-theme-even">hugo-theme-even</a>:<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fahonn%2Fhexo-theme-even"> hexo-theme-even</a>的移植版本.</p>
+<h4 id="下载">下载</h4>
+<p>可以直接 clone 到 themes 目录下，优点是如果对主题有调整需求可以同时提交到 git 控制中。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript"><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">clone</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/olOwOlo/hugo-theme-even themes/even  
+</span></code></pre></div><p>也可以添加到 git 的 submodule 中，优点是后面讲到用 travis 自动部署时比较方便。如果需要对主题做更改，最好 fork 主题再做改动。</p>
+<h4 id="新-build">新 <code>build</code></h4>
+<p>如果需要调整更改主题，需要在 <code>themes/even</code> 目录下重新 <code>build</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript"><span style="color:#a6e22e">cd</span> <span style="color:#a6e22e">themes</span><span style="color:#f92672">/</span><span style="color:#a6e22e">even</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">start</span>  
+</code></pre></div><h4 id="第一篇文章">第一篇文章</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript"><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">post</span><span style="color:#f92672">/</span><span style="color:#a6e22e">my</span><span style="color:#f92672">-</span><span style="color:#a6e22e">first</span><span style="color:#f92672">-</span><span style="color:#a6e22e">post</span>.<span style="color:#a6e22e">md</span>  
+</code></pre></div><p>文章顶部可以设置一些 meta 信息，例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript"><span style="color:#f92672">---</span>  
+<span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;My First Post&#34;</span>  
+<span style="color:#a6e22e">date</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2017</span><span style="color:#f92672">-</span><span style="color:#ae81ff">12</span><span style="color:#f92672">-</span><span style="color:#ae81ff">14</span><span style="color:#a6e22e">T11</span><span style="color:#f92672">:</span><span style="color:#ae81ff">18</span><span style="color:#f92672">:</span><span style="color:#ae81ff">15</span><span style="color:#f92672">+</span><span style="color:#ae81ff">08</span><span style="color:#f92672">:</span><span style="color:#ae81ff">00</span>  
+<span style="color:#a6e22e">weight</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">70</span>  
+<span style="color:#a6e22e">markup</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">mmark</span>  
+<span style="color:#a6e22e">draft</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>  
+<span style="color:#a6e22e">keywords</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;hugo&#34;</span>]  
+<span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;第一篇文章&#34;</span>  
+<span style="color:#a6e22e">tags</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;pages&#34;</span>]  
+<span style="color:#a6e22e">categories</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;pages&#34;</span>]  
+<span style="color:#a6e22e">author</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>  
+<span style="color:#f92672">---</span>  
+<span style="color:#a6e22e">这里是文章内容</span>  
+</code></pre></div><h4 id="预览">预览</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javaScript" data-lang="javaScript"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">D</span>  
+<span style="color:#960050;background-color:#1e0010">#</span>...  
+<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">Web</span> <span style="color:#a6e22e">Server</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">available</span> <span style="color:#a6e22e">at</span> <span style="color:#a6e22e">http</span><span style="color:#f92672">:</span><span style="color:#75715e">//localhost:1313/ (bind address 127.0.0.1)  
+</span></code></pre></div><h3 id="win-10版本">WIN 10版本</h3>
+<h4 id="安装hugo">安装Hugo</h4>
+<p><a href="https://github.com/gohugoio/hugo/releases">hugo下载地址</a></p>
+<h4 id="下载完成后需要配置到系统环境变量中">下载完成后需要配置到系统环境变量中</h4>
+<h4 id="使用hugo生成博客">使用Hugo生成博客</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">site</span> <span style="color:#a6e22e">myblog</span>
+</code></pre></div><p>这样我的User/win 10/里面就生成了一个mybolg 文件夹，那么这个文件夹就代表着我们的博客网站</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">archetypes</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">toml</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">content</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">data</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">layouts</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#66d9ef">static</span>
+<span style="color:#960050;background-color:#1e0010">└──</span> <span style="color:#a6e22e">themes</span>
+</code></pre></div><h4 id="下载设置主题">下载设置主题</h4>
+<p><a href="https://themes.gohugo.io/hugo-theme-m10c/">点击下载主题</a> 我的是m10c</p>
+<p>在myblog/themes文件夹下输入</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">clone</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/vaga/hugo-theme-m10c.git themes/m10c
+</span></code></pre></div><p>即可完成下载</p>
+<h4 id="启动博客">启动博客</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">t</span> <span style="color:#a6e22e">m10c</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span>
+</code></pre></div><p>这时可通过 http://localhost:1313/ 访问</p>
+<h4 id="创建一篇文章">创建一篇文章</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">post</span><span style="color:#f92672">/</span><span style="color:#a6e22e">hugo</span>.<span style="color:#a6e22e">md</span>
+
+<span style="color:#75715e">//文件目录
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">archetypes</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">toml</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">content</span>
+  <span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">post</span>
+    <span style="color:#960050;background-color:#1e0010">├──</span><span style="color:#a6e22e">hugo</span>.<span style="color:#a6e22e">md</span> 
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">data</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">layouts</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#66d9ef">static</span>
+<span style="color:#960050;background-color:#1e0010">└──</span> <span style="color:#a6e22e">themes</span>
+</code></pre></div><p>完成后在根目录启动项目</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">t</span> <span style="color:#a6e22e">m10c</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span>
+</code></pre></div><h4 id="将个人博客到远端服务器">将个人博客到远端服务器</h4>
+<ol>
+<li>
+<p>在github官网页面新建一个仓库</p>
+</li>
+<li>
+<p>仓库名字必须是自己的github名字加.github.io例如</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//Owner
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">LLDLZ</span>
+<span style="color:#75715e">//Repository name
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">LLDLZ</span>.<span style="color:#a6e22e">github</span>.<span style="color:#a6e22e">io</span>
+</code></pre></div></li>
+<li>
+<p>利用如下代码部署</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//若添加了文章  则需要重新部署
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">hugo</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">theme</span><span style="color:#f92672">=</span><span style="color:#a6e22e">m10c</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">baseUrl</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://LLDLZ.github.io/&#34;</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildDrafts</span>
+<span style="color:#75715e">//生成后文件目录
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">archetypes</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">toml</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">content</span>
+<span style="color:#960050;background-color:#1e0010">├──</span><span style="color:#66d9ef">public</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">data</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#a6e22e">layouts</span>
+<span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#66d9ef">static</span>
+<span style="color:#960050;background-color:#1e0010">└──</span> <span style="color:#a6e22e">themes</span>
+</code></pre></div></li>
+<li>
+<p>进入public目录下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//初始化git仓库
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">init</span> 
+<span style="color:#75715e">//添加修改文件
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">add</span> .
+<span style="color:#75715e">//提交到暂存库
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">commit</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">m</span><span style="color:#e6db74">&#34;第一个提交&#34;</span>
+<span style="color:#75715e">//将public和远端仓库建立联系
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">git</span> <span style="color:#a6e22e">remote</span> <span style="color:#a6e22e">add</span> <span style="color:#a6e22e">orgin</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//github.com/LLDLZ/LLDLZ.github.io.git
+</span><span style="color:#75715e">//推送代码
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">git</span> <span style="color:#a6e22e">push</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">origin</span> <span style="color:#a6e22e">master</span>
+</code></pre></div></li>
+</ol>
+<h4 id="完成">完成</h4>
+<ul>
+<li>此时可上线查看自己的博客项目</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
